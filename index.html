@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gerenciamento de Egressos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Gerenciamento de Egressos</h1>
+        <nav>
+            <button data-section="cadastrar">Cadastrar Egresso</button>
+            <button data-section="listar">Listar Egressos</button>
+            <button data-section="buscar">Buscar Egresso</button>
+            <button data-section="excluir">Excluir Egresso</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Cadastrar Egresso -->
+        <section id="cadastrar" class="hidden">
+            <h2>Cadastrar Egresso</h2>
+            <form id="formCadastrar">
+                <label>Matrícula:</label>
+                <input type="text" id="matricula" required>
+                <label>Nome:</label>
+                <input type="text" id="nome" required>
+                <label>Curso:</label>
+                <input type="text" id="curso" required>
+                <label>Ano de Conclusão:</label>
+                <input type="number" id="anoConclusao" required>
+                <label>Status Profissional:</label>
+                <input type="text" id="statusProfissional" required>
+                <label>Local de Trabalho:</label>
+                <input type="text" id="localDeTrabalho" required>
+                <label>E-mail:</label>
+                <input type="email" id="email" required>
+                <button type="submit">Salvar</button>
+            </form>
+        </section>
+
+        <!-- Listar Egressos -->
+        <section id="listar" class="hidden">
+            <h2>Listar Egressos</h2>
+            <div id="listaEgressos"></div>
+        </section>
+
+        <!-- Buscar Egresso -->
+        <section id="buscar" class="hidden">
+            <h2>Buscar Egresso</h2>
+            <form id="formBuscar">
+                <label>Informe a Matrícula:</label>
+                <input type="text" id="matriculaBusca" required>
+                <button type="submit">Buscar</button>
+            </form>
+            <div id="resultadoBusca"></div>
+        </section>
+
+        <!-- Excluir Egresso -->
+        <section id="excluir" class="hidden">
+            <h2>Excluir Egresso</h2>
+            <form id="formExcluir">
+                <label>Informe a Matrícula:</label>
+                <input type="text" id="matriculaExcluir" required>
+                <button type="submit">Excluir</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
